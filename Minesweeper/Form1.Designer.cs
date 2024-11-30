@@ -1,6 +1,6 @@
 ﻿namespace Minesweeper
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,6 +31,10 @@
             mineNumText = new TextBox();
             EntryLabel = new Label();
             startButton = new Button();
+            FlagButton = new Button();
+            MineCountLabel = new Label();
+            RemainigLabel = new Label();
+            RestartButton = new Button();
             SuspendLayout();
             // 
             // mineNumText
@@ -63,17 +67,68 @@
             startButton.UseVisualStyleBackColor = true;
             startButton.Click += StartButton_click;
             // 
-            // Form1
+            // FlagButton
+            // 
+            FlagButton.BackColor = Color.White;
+            FlagButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            FlagButton.Location = new Point(1143, 167);
+            FlagButton.Name = "FlagButton";
+            FlagButton.Size = new Size(90, 60);
+            FlagButton.TabIndex = 3;
+            FlagButton.Text = "Flag";
+            FlagButton.UseVisualStyleBackColor = false;
+            FlagButton.Visible = false;
+            FlagButton.Click += FlagButton_Click;
+            // 
+            // MineCountLabel
+            // 
+            MineCountLabel.AutoSize = true;
+            MineCountLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            MineCountLabel.Location = new Point(994, 52);
+            MineCountLabel.Name = "MineCountLabel";
+            MineCountLabel.Size = new Size(130, 28);
+            MineCountLabel.TabIndex = 4;
+            MineCountLabel.Text = "Mine Count: ";
+            MineCountLabel.Visible = false;
+            // 
+            // RemainigLabel
+            // 
+            RemainigLabel.AutoSize = true;
+            RemainigLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            RemainigLabel.Location = new Point(994, 106);
+            RemainigLabel.Name = "RemainigLabel";
+            RemainigLabel.Size = new Size(119, 28);
+            RemainigLabel.TabIndex = 5;
+            RemainigLabel.Text = "Remaining: ";
+            RemainigLabel.Visible = false;
+            // 
+            // RestartButton
+            // 
+            RestartButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            RestartButton.Location = new Point(1143, 625);
+            RestartButton.Name = "RestartButton";
+            RestartButton.Size = new Size(90, 50);
+            RestartButton.TabIndex = 6;
+            RestartButton.Text = "Restart";
+            RestartButton.UseVisualStyleBackColor = true;
+            RestartButton.Visible = false;
+            RestartButton.Click += RestartButton_Click;
+            // 
+            // MainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(1258, 849);
+            Controls.Add(RestartButton);
+            Controls.Add(RemainigLabel);
+            Controls.Add(MineCountLabel);
+            Controls.Add(FlagButton);
             Controls.Add(startButton);
             Controls.Add(EntryLabel);
             Controls.Add(mineNumText);
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            Name = "Form1";
+            Name = "MainMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Minesweeper";
             ResumeLayout(false);
@@ -85,5 +140,9 @@
         private TextBox mineNumText;
         private Label EntryLabel;
         private Button startButton;
+        private Button FlagButton;
+        private Label MineCountLabel;
+        private Label RemainigLabel;
+        private Button RestartButton;
     }
 }
