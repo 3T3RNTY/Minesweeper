@@ -7,3 +7,4 @@
 - Sorry for problematic game ( It questioned my sanity )
 - Can't compare the images. Because of that game is not ending as intended
 - When placed a flag you can't remove it with intended way
+- When entered a low amount of mines, recursive function makes it freeze for a few minutes ( Please use more than 500 mines )
